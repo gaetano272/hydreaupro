@@ -11,7 +11,7 @@
   <script defer src="main.js"></script>
 </head>
 
-<body class="prest-page prest-page--assainissement">
+<body class="prest-page service-page-assainissement">
 
   <header class="hero-banner">
     <img src="images/bannieres.webp" alt="Bannière HYDREAUPRO">
@@ -20,7 +20,7 @@
   <nav class="site-header" aria-label="Navigation principale">
     <div class="container nav-inner">
       <a href="index.html" class="brand">
-        <img src="images/logo-hydraupro.webp" alt="Logo HYDREAUPRO">
+        <img src="images/logo-hydreaupro.webp" alt="Logo HYDREAUPRO">
         <span class="brand-text">
           <span class="brand-text__blue">HYDREAU</span><span class="brand-text__orange">PRO</span>
         </span>
@@ -31,7 +31,7 @@
       <ul class="nav-menu">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="assainissement.html" class="active" aria-current="page">Assainissement</a></li>
-        <li><a href="distribution.html">Distribution</a></li>
+        <li><a href="distribution.html">Surpression</a></li>
         <li><a href="irrigation.html">Irrigation</a></li>
         <li><a href="actualites.php">Actualités</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -43,21 +43,12 @@
 
   <main>
 
-    <section class="page-header">
+    <section class="page-header page-header--intro-only">
       <div class="container">
-        <div class="page-title">
-          <h1>Assainissement autonome</h1>
-          <span class="page-title__brand">HYDREAUPRO</span>
-
+        <div class="page-title page-title--compact">
+          <h1 class="visually-hidden">Assainissement autonome</h1>
           <div class="page-intro">
-            <strong>HYDREAUPRO</strong>
-            <p>
-              Au Sénégal, l’assainissement autonome constitue un enjeu majeur de santé publique,
-              de protection de l’environnement et de qualité de vie, notamment dans les zones non
-              raccordées aux réseaux d’assainissement collectif. Une solution mal conçue ou mal
-              entretenue peut entraîner des pollutions des sols et des nappes phréatiques,
-              des nuisances sanitaires et des risques pour les populations.
-            </p>
+            <p>Au Sénégal, l’assainissement autonome constitue un enjeu majeur de santé publique, de protection de l’environnement et de qualité de vie, notamment dans les zones non raccordées aux réseaux d’assainissement collectif. Une solution d’assainissement mal conçue ou mal entretenue peut entraîner des pollutions des sols et des nappes phréatiques, des nuisances sanitaires et des risques pour les populations. Pour répondre à ces défis, HYDREAUPRO propose des solutions d’assainissement autonome fiables, durables et conformes aux normes, garantissant une gestion efficace et sécurisée des eaux usées domestiques et assimilées.</p>
           </div>
         </div>
       </div>
@@ -66,9 +57,9 @@
     <section class="content-section">
       <div class="container service-block">
 
-        <aside class="service-media" aria-hidden="true">
+        <aside class="service-media service-media--plan" aria-label="Illustration Assainissement autonome">
           <figure class="service-media__photo">
-            <img src="images/assainissement-autonome.webp" alt="Installation d’assainissement autonome">
+            <img src="images/assainissement-cuve-enterree.webp" alt="Installation d’assainissement autonome présentée en plan large" loading="lazy">
           </figure>
           <div class="service-media__inner">
             <span class="service-media__tag">Assainissement autonome</span>
@@ -76,70 +67,57 @@
         </aside>
 
         <div class="content-column">
-          <h2 class="section-title">Des solutions fiables, durables et conformes</h2>
+          <h2 class="section-title">Nos solutions d’assainissement autonome</h2>
 
-          <p class="section-text">
-            Pour répondre aux enjeux sanitaires et environnementaux, HYDREAUPRO propose des
-            solutions d’assainissement autonome adaptées aux besoins spécifiques de chaque site.
-            Nous accompagnons les particuliers, les professionnels et les porteurs de projets
-            dans la planification, la conception, la réalisation et l’entretien de leurs ouvrages.
-          </p>
+          <p class="section-text">HYDREAUPRO accompagne les particuliers, professionnels et porteurs de projets dans la planification, la conception, la réalisation et l’entretien de leurs ouvrages d’assainissement autonome.</p>
 
-          <h3 class="subheading">Étude et diagnostic des besoins</h3>
+          <h3 class="subheading">Étude et diagnostic des besoins en assainissement</h3>
           <ul class="arrow-list">
             <li>Analyse des caractéristiques du site : sol, topographie et niveau de nappe.</li>
             <li>Évaluation des volumes d’eaux usées à traiter.</li>
             <li>Solutions adaptées aux habitations, immeubles, établissements et sites isolés.</li>
           </ul>
-
           <h3 class="subheading">Systèmes d’assainissement autonome</h3>
           <ul class="arrow-list">
             <li>Conception et installation de fosses septiques et fosses toutes eaux.</li>
-            <li>Mise en place de filtres, lits d’infiltration et dispositifs compacts.</li>
+            <li>Mise en place de systèmes de traitement adaptés : filtres, lits d’infiltration et dispositifs compacts.</li>
             <li>Optimisation du fonctionnement hydraulique et sanitaire des installations.</li>
           </ul>
-
-          <h3 class="subheading">Gestion, accompagnement et maintenance</h3>
+          <h3 class="subheading">Gestion et évacuation des eaux usées</h3>
           <ul class="arrow-list">
             <li>Solutions sécurisées pour l’infiltration ou l’évacuation des eaux traitées.</li>
             <li>Protection des sols et des ressources en eau.</li>
             <li>Respect des normes d’hygiène et de protection de l’environnement.</li>
-            <li>Assistance technique pour un fonctionnement durable.</li>
-            <li>Maintenance préventive et corrective des systèmes d’assainissement autonome.</li>
-            <li>Conseils d’exploitation pour garantir la longévité et l’efficacité des ouvrages.</li>
+            <li>Réutilisation des eaux usées traitées.</li>
           </ul>
-        </div>
-
       </div>
     </section>
 
-        <section class="container photo-gallery">
+    <section class="container photo-gallery">
       <div class="photo-gallery__head">
         <div>
           <h2>Illustrations de terrain</h2>
-          <p>Quelques visuels concrets pour montrer les types d’ouvrages et d’interventions liés à l’assainissement autonome.</p>
+          <p>Quelques visuels concrets pour montrer les types d’ouvrages et d’interventions liés à cette prestation.</p>
         </div>
       </div>
 
       <div class="photo-gallery__grid">
         <article class="photo-card">
-          <img src="images/regard-de-controle.webp" alt="Regard de contrôle">
+          <img src="images/assainissement-regard.webp" alt="Regard de contrôle" loading="lazy">
           <div class="photo-card__body">
             <strong>Regard de contrôle</strong>
             <p>Inspection d’un ouvrage existant pour vérifier l’état et le bon écoulement des effluents.</p>
           </div>
         </article>
-
         <article class="photo-card">
-          <img src="images/fosse-toutes-eaux.webp" alt="Fosse toutes eaux">
+          <img src="images/assainissement-cuve-tranchee.webp" alt="Fosse toutes eaux" loading="lazy">
           <div class="photo-card__body">
             <strong>Fosse toutes eaux</strong>
             <p>Équipement installé pour le traitement primaire et le stockage des eaux usées.</p>
           </div>
         </article>
-
         <article class="photo-card">
-          <img src="images/reseau-depandage.webp" alt="Réseau d’épandage">
+          <img src="images/assainissement-epandage-tuyaux.webp" alt="Réseau d’épandage" loading="lazy">
           <div class="photo-card__body">
             <strong>Réseau d’épandage</strong>
             <p>Canalisations destinées à une gestion maîtrisée des eaux à traiter.</p>
@@ -151,27 +129,21 @@
     <section class="intervention-section">
       <div class="container">
         <h2 class="intervention-title">Nos domaines d’intervention</h2>
-        <p class="intervention-intro">
-          HYDREAUPRO intervient sur l’ensemble du territoire sénégalais pour accompagner les projets
-          résidentiels, professionnels et collectifs non raccordés au réseau d’assainissement.
-        </p>
+        <p class="intervention-intro">HYDREAUPRO intervient sur l’ensemble du territoire sénégalais pour accompagner les projets résidentiels, professionnels et collectifs non raccordés au réseau d’assainissement.</p>
 
         <div class="intervention-grid">
           <article class="intervention-card">
             <h3>Habitations individuelles et concessions</h3>
             <p>Solutions adaptées aux maisons, villas et parcelles non raccordées.</p>
           </article>
-
           <article class="intervention-card">
-            <h3>Immeubles et résidences</h3>
+            <h3>Immeubles et résidences non raccordés</h3>
             <p>Approches compatibles avec les projets résidentiels collectifs hors réseau.</p>
           </article>
-
           <article class="intervention-card">
             <h3>Établissements scolaires, sanitaires et administratifs</h3>
             <p>Prise en compte des usages, des volumes et des exigences d’hygiène.</p>
           </article>
-
           <article class="intervention-card">
             <h3>Hôtels, sites touristiques et zones rurales</h3>
             <p>Réponses dimensionnées pour des contextes d’implantation variés.</p>
@@ -180,17 +152,11 @@
       </div>
     </section>
 
-
     <section class="cta-band">
       <div class="container">
-        <h2>Contactez-nous pour votre projet d’assainissement autonome</h2>
-        <p>
-          Vous avez un besoin en étude, dimensionnement ou accompagnement technique ?
-          Échangeons sur votre site, vos contraintes et la solution la plus adaptée.
-        </p>
+        <h2>Votre projet d’assainissement autonome</h2>
         <div class="btn-row">
           <a class="btn-cta" href="contact.html">Nous contacter</a>
-          <a class="btn-outline" href="distribution.html">Voir la distribution</a>
         </div>
       </div>
     </section>
@@ -199,8 +165,8 @@
 
   <footer class="site-footer">
     <div class="container site-footer__inner">
-      <small>© 2026 HYDREAUPRO — Assainissement, distribution d’eau potable et irrigation au Sénégal.</small>
-      <small><a href="mailto:contact@hydraupro.sn">contact@hydraupro.sn</a></small>
+      <small>© 2026 HYDREAUPRO — Assainissement autonome, surpression d’eau potable et irrigation au Sénégal.</small>
+      <small><a href="mentions-legales.html">Mentions légales</a> · <a href="mailto:contact@hydraupro.sn">contact@hydraupro.sn</a></small>
     </div>
   </footer>
 

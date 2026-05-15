@@ -2,7 +2,6 @@
 
 /* =========================================================
    01 — VARIABLES GLOBALES
-   Couleurs, typographies, espacements et ombres du site.
 ========================================================= */
 :root {
   --wrap: min(1240px, calc(100vw - 48px));
@@ -18,7 +17,6 @@
   --orange-2: #ff8424;
   --orange-soft: #ffb37c;
 
-  /* Bleu utilisé uniquement pour le mot HYDREAU dans le logo texte */
   --brand-blue: #0b3b82;
 
   --white: #ffffff;
@@ -65,7 +63,8 @@ body {
 
 body.prest-page,
 body.contact-page,
-body.actualites-page {
+body.actualites-page,
+body.legal-page {
   background: var(--bg);
 }
 
@@ -105,7 +104,6 @@ textarea {
   margin: 0 auto;
 }
 
-/* Ancienne classe conservée pour compatibilité avec index.html */
 .block-orange {
   background: var(--surface);
   border: 0;
@@ -113,9 +111,20 @@ textarea {
   box-shadow: none;
 }
 
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 /* =========================================================
    03 — BANNIÈRE COMMUNE
-   Même bannière en haut de chaque page.
 ========================================================= */
 .hero-banner {
   width: 100%;
@@ -132,7 +141,6 @@ textarea {
 
 /* =========================================================
    04 — MENU COMMUN
-   Logo HYDREAU/PRO, navigation, bouton devis, menu mobile.
 ========================================================= */
 .site-header {
   position: sticky;
@@ -263,7 +271,6 @@ textarea {
 
 /* =========================================================
    05 — COMPOSANTS GLOBAUX
-   Boutons, titres communs, sections générales.
 ========================================================= */
 .btn,
 .btn-cta,
@@ -360,10 +367,10 @@ textarea {
 
 /* =========================================================
    06 — PAGE ACCUEIL : index.html
-   Accueil simple, blanc, centré, sans gros encadrements orange.
 ========================================================= */
+body.home-page,
 body.home-clean,
-body:not(.prest-page):not(.contact-page):not(.actualites-page) {
+body:not(.prest-page):not(.contact-page):not(.actualites-page):not(.legal-page) {
   background: #fff;
 }
 
@@ -420,15 +427,18 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
 }
 
 .service-card__media {
+  height: 250px;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background: #f6f3ef;
 }
 
 .service-card__media img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
   border: 0;
   border-radius: 0;
 }
@@ -605,10 +615,14 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
 
 /* =========================================================
    07 — PAGES PRESTATIONS : STRUCTURE COMMUNE
-   Assainissement, Distribution, Irrigation.
+   Assainissement, Surpression, Irrigation.
 ========================================================= */
 .page-header {
   padding: 58px 0 28px;
+}
+
+.page-header--intro-only {
+  padding-bottom: 22px;
 }
 
 .breadcrumb {
@@ -662,21 +676,17 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
   background: var(--orange);
 }
 
-.page-intro strong {
-  color: var(--orange);
-}
-
 .page-intro p {
   margin-bottom: 0;
 }
 
 .content-section {
-  padding: 28px 0 0;
+  padding: 34px 0 0;
 }
 
 .service-block {
   display: grid;
-  grid-template-columns: minmax(300px, 430px) 1fr;
+  grid-template-columns: 430px minmax(0, 1fr);
   gap: 68px;
   align-items: start;
 }
@@ -684,6 +694,8 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
 .service-media {
   position: sticky;
   top: 118px;
+  width: 430px;
+  height: 660px;
   overflow: hidden;
   border-radius: 40px;
   background: linear-gradient(180deg, #2a2a2f 0%, #151518 100%);
@@ -692,9 +704,10 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
 
 .service-media__photo {
   position: relative;
-  margin: 0;
-  height: 660px;
+  width: 100%;
+  height: 100%;
   min-height: 660px;
+  margin: 0;
   overflow: hidden;
 }
 
@@ -702,14 +715,18 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(15, 15, 18, 0.02) 0%, rgba(15, 15, 18, 0.16) 45%, rgba(15, 15, 18, 0.82) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(15, 15, 18, 0.02) 0%,
+    rgba(15, 15, 18, 0.16) 45%,
+    rgba(15, 15, 18, 0.82) 100%
+  );
   pointer-events: none;
 }
 
 .service-media__photo img {
   width: 100%;
   height: 100%;
-  min-height: 0;
   object-fit: cover;
   object-position: center center;
 }
@@ -730,8 +747,8 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
   padding: 0 16px;
   align-items: center;
   border-radius: var(--radius-pill);
-  background: rgba(10, 10, 10, 0.68);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(10, 10, 10, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   color: #fff;
   font-size: 0.84rem;
   font-weight: 800;
@@ -789,7 +806,6 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
 
 /* =========================================================
    08 — GALERIES PHOTOS DES PAGES PRESTATIONS
-   Illustrations de terrain : 3 cartes en bas des pages.
 ========================================================= */
 .photo-gallery {
   margin: 54px auto 0;
@@ -835,6 +851,7 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
   width: 100%;
   height: 250px;
   object-fit: cover;
+  object-position: center;
 }
 
 .photo-card__body {
@@ -856,7 +873,6 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
 
 /* =========================================================
    09 — DOMAINES D’INTERVENTION
-   Section placée après les illustrations, dans le style demandé.
 ========================================================= */
 .intervention-section {
   padding: 70px 0 44px;
@@ -917,7 +933,6 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
 
 /* =========================================================
    10 — CTA GLOBAL
-   Bande orange de fin de page.
 ========================================================= */
 .cta-band {
   background: var(--orange);
@@ -962,61 +977,9 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
 
 /* =========================================================
    11 — PAGE CONTACT : contact.html
-   Formulaire et coordonnées dans le même style que le site.
 ========================================================= */
 .contact-page .page-header {
   padding-bottom: 18px;
-}
-
-.contact-summary {
-  margin: 32px auto 0;
-}
-
-.contact-summary__grid,
-.intro-band__grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.contact-summary__card,
-.intro-pill {
-  position: relative;
-  overflow: hidden;
-  min-height: 150px;
-  padding: 24px 24px 26px;
-  background: #fff;
-  border: 1px solid rgba(18, 18, 18, 0.08);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-soft);
-}
-
-.contact-summary__card::before,
-.intro-pill::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 22px;
-  bottom: 22px;
-  width: 5px;
-  border-radius: 0 999px 999px 0;
-  background: var(--orange);
-}
-
-.contact-summary__card strong,
-.intro-pill strong {
-  display: block;
-  margin: 0 0 8px;
-  color: var(--black-soft);
-  font-size: 1.08rem;
-  font-weight: 800;
-}
-
-.contact-summary__card p,
-.intro-pill p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.7;
 }
 
 .contact-layout {
@@ -1109,12 +1072,6 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
   margin-top: 24px;
 }
 
-.form-note {
-  margin: 18px 0 0;
-  color: var(--muted);
-  font-size: 0.94rem;
-}
-
 .contact-info__block {
   margin-bottom: 22px;
 }
@@ -1185,8 +1142,12 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
 
 /* =========================================================
    12 — PAGE ACTUALITÉS : actualites.php
-   Cartes PDF générées depuis la base de données.
 ========================================================= */
+.actualites-listing,
+.news-section {
+  padding: 72px 0;
+}
+
 .actualites-grid,
 .news-grid {
   display: grid;
@@ -1205,6 +1166,7 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
 }
 
 .actualite-card .photo-card__body,
+.actualite-card__body,
 .news-card__body {
   padding: 24px;
 }
@@ -1239,7 +1201,9 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
   margin-bottom: 20px;
 }
 
-.empty-state {
+.empty-state,
+.actualites-empty,
+.actualites-db-error {
   max-width: 760px;
   margin: 26px auto 0;
   padding: 30px;
@@ -1250,7 +1214,18 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
 }
 
 /* =========================================================
-   13 — FOOTER
+   13 — PAGE MENTIONS LÉGALES
+========================================================= */
+.legal-page .contact-form h2 {
+  margin-top: 28px;
+}
+
+.legal-page .contact-form h2:first-child {
+  margin-top: 0;
+}
+
+/* =========================================================
+   14 — FOOTER
 ========================================================= */
 .site-footer {
   background: var(--black);
@@ -1272,7 +1247,7 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
 }
 
 /* =========================================================
-   14 — RESPONSIVE
+   15 — RESPONSIVE
 ========================================================= */
 @media (max-width: 1180px) {
   :root {
@@ -1299,6 +1274,9 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
   .service-media {
     position: relative;
     top: 0;
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
   }
 }
 
@@ -1306,8 +1284,6 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
   .cards-grid,
   .photo-gallery__grid,
   .intervention-grid,
-  .contact-summary__grid,
-  .intro-band__grid,
   .actualites-grid,
   .news-grid {
     grid-template-columns: 1fr;
@@ -1387,11 +1363,13 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
     --wrap: min(100vw - 24px, 100%);
   }
 
-  .service-media,
-  .service-media__photo {
-    min-height: 420px;
-    height: 420px;
+  .service-media {
+    height: 520px;
     border-radius: 32px;
+  }
+
+  .service-media__photo {
+    min-height: 520px;
   }
 
   .section-head h2,
@@ -1404,8 +1382,6 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page) {
 
   .contact-form,
   .contact-info,
-  .contact-summary__card,
-  .intro-pill,
   .cta-contact__inner,
   .team-card,
   .service-card__body,

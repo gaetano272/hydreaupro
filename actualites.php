@@ -69,7 +69,7 @@ try {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Actualités — HYDREAUPRO</title>
-  <meta name="description" content="Actualités, conseils et documents HYDRAUPRO sur l’assainissement, l’eau potable et l’irrigation au Sénégal.">
+  <meta name="description" content="Actualités, conseils et documents HYDREAUPRO sur l’assainissement, l’eau potable et l’irrigation au Sénégal.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
@@ -78,15 +78,15 @@ try {
 <body class="prest-page actualites-page">
 
   <header class="hero-banner">
-    <img src="images/bannieres.png" alt="Bannière HYDRAUPRO">
+    <img src="images/bannieres.webp" alt="Bannière HYDREAUPRO">
   </header>
 
   <nav class="site-header" aria-label="Navigation principale">
     <div class="container nav-inner">
       <a href="index.html" class="brand">
-        <img src="images/logo-hydraupro.png" alt="Logo HYDREAUPRO">
+        <img src="images/logo-hydreaupro.webp" alt="Logo HYDREAUPRO">
         <span class="brand-text">
-          <span class="brand-text__blue">HYDREA</span><span class="brand-text__orange">UPRO</span>
+          <span class="brand-text__blue">HYDREAU</span><span class="brand-text__orange">PRO</span>
         </span>
       </a>
 
@@ -95,7 +95,7 @@ try {
       <ul class="nav-menu">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="assainissement.html">Assainissement</a></li>
-        <li><a href="distribution.html">Distribution</a></li>
+        <li><a href="distribution.html">Surpression</a></li>
         <li><a href="irrigation.html">Irrigation</a></li>
         <li><a href="actualites.php" class="active" aria-current="page">Actualités</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -115,7 +115,7 @@ try {
             <strong>HYDREAUPRO</strong>
             <p>
               Retrouvez ici nos documents PDF, conseils pratiques, informations techniques
-              et actualités autour de l’assainissement autonome, de la distribution d’eau potable
+              et actualités autour de l’assainissement autonome, de la surpression d’eau potable
               et de l’irrigation.
             </p>
           </div>
@@ -156,7 +156,7 @@ try {
                   <?= h(formatDateFr($actualite['date_publication'] ?? '')) ?>
                 </time>
 
-                <strong><?= h($actualite['titre'] ?? 'Actualité HYDRAUPRO') ?></strong>
+                <strong><?= h($actualite['titre'] ?? 'Actualité HYDREAUPRO') ?></strong>
 
                 <?php if (!empty($actualite['description'])): ?>
                   <p><?= nl2br(h($actualite['description'])) ?></p>
@@ -177,7 +177,7 @@ try {
         <h2>Besoin d’un conseil technique ?</h2>
         <p>
           Contactez HYDREAUPRO pour échanger sur votre projet d’assainissement,
-          de distribution d’eau potable ou d’irrigation.
+          de surpression d’eau potable ou d’irrigation.
         </p>
         <div class="btn-row">
           <a class="btn-cta" href="contact.html">Nous contacter</a>
@@ -189,8 +189,8 @@ try {
 
   <footer class="site-footer">
     <div class="container site-footer__inner">
-      <small>© 2026 HYDREAUPRO — Assainissement, distribution d’eau potable et irrigation au Sénégal.</small>
-      <small><a href="mailto:contact@hydraupro.sn">contact@hydraupro.sn</a></small>
+      <small>© 2026 HYDREAUPRO — Assainissement autonome, surpression d’eau potable et irrigation au Sénégal.</small>
+      <small><a href="mentions-legales.html">Mentions légales</a> · <a href="mailto:contact@hydraupro.sn">contact@hydraupro.sn</a></small>
     </div>
   </footer>
 </body>
