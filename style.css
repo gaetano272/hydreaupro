@@ -1408,3 +1408,78 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page):not(.legal-page) 
     text-align: center;
   }
 }
+
+
+
+/* =========================================================
+   CORRECTIF CIBLÉ — IMAGE ASSAINISSEMENT NON COUPÉE
+   Objectif :
+   - garder la photo entière dans le bloc vertical ;
+   - ne pas toucher à la page d'accueil ;
+   - ne pas modifier le CTA orange ;
+   - conserver image à gauche / texte à droite.
+========================================================= */
+
+.service-page-assainissement .service-media {
+  background: #f5f5f5 !important;
+}
+
+.service-page-assainissement .service-media__photo {
+  width: 100% !important;
+  height: 640px !important;
+  min-height: 640px !important;
+  max-width: 440px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  background: #f5f5f5 !important;
+  border-radius: 28px !important;
+}
+
+.service-page-assainissement .service-media__photo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  display: block !important;
+}
+
+/* On enlève l'overlay sombre uniquement sur l'image de gauche de la page assainissement */
+.service-page-assainissement .service-media__photo::after {
+  display: none !important;
+}
+
+/* On garde l'image à gauche et le texte à droite */
+.service-page-assainissement .service-block {
+  grid-template-columns: minmax(320px, 440px) minmax(0, 1fr) !important;
+  align-items: start !important;
+}
+
+.service-page-assainissement .service-media {
+  order: 1 !important;
+}
+
+.service-page-assainissement .content-column {
+  order: 2 !important;
+}
+
+/* Responsive mobile : l'image reste entière */
+@media (max-width: 1180px) {
+  .service-page-assainissement .service-block {
+    grid-template-columns: 1fr !important;
+  }
+
+  .service-page-assainissement .service-media {
+    max-width: 440px !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .service-page-assainissement .service-media__photo {
+    height: 520px !important;
+    min-height: 520px !important;
+  }
+}

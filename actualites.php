@@ -190,7 +190,7 @@ try {
   <footer class="site-footer">
     <div class="container site-footer__inner">
       <small>© 2026 HYDREAUPRO — Assainissement autonome, surpression d’eau potable et irrigation au Sénégal.</small>
-      <small><a href="mentions-legales.html">Mentions légales</a> · <a href="mailto:contact@hydraupro.sn">contact@hydraupro.sn</a></small>
+      <small><a href="mentions-legales.html">Mentions légales</a> · <a href="mailto:contact@hydreaupro.sn">contact@hydraupro.sn</a></small>
     </div>
   </footer>
 </body>
