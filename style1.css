@@ -1565,25 +1565,3 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page):not(.legal-page) 
   font-weight: 900;
   letter-spacing: 0.12em;
 }
-
-
-
-/* =========================================================
-   CORRECTIF ACCUEIL — IMAGE 6 ÉTAPES LARGEUR SERVICE CARDS
-   Objectif :
-   - l'image des 6 étapes prend la même largeur que les service cards ;
-   - correction ciblée uniquement sur l'accueil ;
-   - ne modifie pas les autres blocs du site.
-========================================================= */
-
-.home-page .about-section__media--large {
-  width: 100%;
-  max-width: none;
-  align-self: stretch;
-}
-
-.home-page .about-section__media--large img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
