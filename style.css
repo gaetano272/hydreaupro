@@ -56,7 +56,7 @@ body {
   margin: 0;
   font-family: var(--font-body);
   color: var(--text);
-  background: #fff;
+  background: var(--bg);
   line-height: 1.72;
   overflow-x: hidden;
 }
@@ -128,15 +128,20 @@ textarea {
 ========================================================= */
 .hero-banner {
   width: 100%;
-  background: #fff;
+  margin: 0;
+  padding: 0;
+  background: var(--black);
   overflow: hidden;
-  border-bottom: 1px solid rgba(255, 106, 0, 0.28);
+  line-height: 0;
+  border-bottom: 0;
 }
 
 .hero-banner img {
   width: 100%;
   height: auto;
   display: block;
+  margin: 0;
+  padding: 0;
 }
 
 /* =========================================================
@@ -371,11 +376,11 @@ textarea {
 body.home-page,
 body.home-clean,
 body:not(.prest-page):not(.contact-page):not(.actualites-page):not(.legal-page) {
-  background: #fff;
+  background: var(--bg);
 }
 
 .intro-strip {
-  padding: 42px 0 18px;
+  padding: 18px 0 10px;
 }
 
 .intro-strip__box {
@@ -406,7 +411,7 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page):not(.legal-page) 
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
+  gap: 24px;
   align-items: stretch;
 }
 
@@ -447,16 +452,17 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page):not(.legal-page) 
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 24px 24px 28px;
+  padding: 22px 24px 28px;
   text-align: left;
 }
 
 .service-card__body h3 {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   color: var(--black-soft);
   font-family: var(--font-title);
   font-size: 1.55rem;
   line-height: 1.15;
+  text-align: center;
 }
 
 .service-card__body p {
@@ -464,11 +470,12 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page):not(.legal-page) 
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.75;
+  text-align: left;
 }
 
 .service-card__body .btn {
   margin-top: auto;
-  align-self: flex-start;
+  align-self: center;
 }
 
 .about-section {
@@ -944,7 +951,7 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page):not(.legal-page) 
 .cta-band h2 {
   margin: 0 0 12px;
   color: #fff;
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(1.5rem, 4vw, 3.2rem);
 }
 
 .cta-band p {
@@ -1566,46 +1573,32 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page):not(.legal-page) 
   letter-spacing: 0.12em;
 }
 
-
-
 /* =========================================================
-   CORRECTIF ACCUEIL — IMAGE 6 ÉTAPES LARGEUR SERVICE CARDS
-   Objectif :
-   - l'image des 6 étapes prend la même largeur que les service cards ;
-   - correction ciblée uniquement sur l'accueil ;
-   - ne modifie pas les autres blocs du site.
+   CORRECTIF — CENTRAGE DES TITRES PHOTO GALLERY
+   Centre uniquement les titres des cartes photos.
 ========================================================= */
 
-.home-page .about-section__media--large {
-  width: 100%;
-  max-width: none;
-  align-self: stretch;
-}
-
-.home-page .about-section__media--large img {
-  width: 100%;
-  height: auto;
+.photo-gallery__grid .photo-card__body strong,
+.photo-gallery__grid .photo-card__title {
   display: block;
+  text-align: center;
 }
 
 /* =========================================================
-   CORRECTIF ACCUEIL — IMAGE SURPRESSION ENTIÈRE
-   Corrige uniquement l’image de la carte Surpression
-   sur la page d’accueil.
+   CORRECTIF — PHRASE GALERIE SUR UNE SEULE LIGNE
 ========================================================= */
 
-.home-page .cards-grid .service-card:nth-of-type(2) .service-card__media {
-  height: 280px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
+.photo-gallery__head > div {
+  width: 100%;
 }
 
-.home-page .cards-grid .service-card:nth-of-type(2) .service-card__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center center;
+.photo-gallery__head p {
+  max-width: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .photo-gallery__head p {
+    white-space: normal;
+  }
 }
