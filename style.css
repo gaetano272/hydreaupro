@@ -517,7 +517,7 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page):not(.legal-page) 
 
 .about-section__media {
   width: 100%;
-  max-width: 980px;
+  max-width: none;
   margin: 0 auto;
   overflow: hidden;
   border-radius: var(--radius-lg);
@@ -881,8 +881,18 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page):not(.legal-page) 
 /* =========================================================
    09 — DOMAINES D’INTERVENTION
 ========================================================= */
-.intervention-section {
+intervention-section {
   padding: 70px 0 44px;
+  background: var(--bg);
+}
+
+intervention-section {
+  padding: 42px 0 44px;
+  background: var(--bg);
+}
+
+.intervention-section {
+  padding: 32px 0 44px;
   background: var(--bg);
 }
 
@@ -1600,5 +1610,63 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page):not(.legal-page) 
 @media (max-width: 768px) {
   .photo-gallery__head p {
     white-space: normal;
+  }
+}
+
+
+/* =========================================================
+   CORRECTIF CONTACT — RÉDUCTION ESPACE TITRE / BLOCS
+   Réduit l'espace entre le texte d'introduction et les deux blocs
+   formulaire + coordonnées, uniquement sur la page contact.
+========================================================= */
+
+.contact-page .page-header {
+  padding-bottom: 0 !important;
+}
+
+.contact-page .content-section {
+  padding-top: 8px !important;
+}
+
+.contact-page .page-title,
+.contact-page .section-head,
+.contact-page .section-heading {
+  margin-bottom: 14px !important;
+}
+
+.contact-page .contact-layout {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .contact-page .content-section {
+    padding-top: 4px !important;
+  }
+}
+
+/* =========================================================
+   CORRECTIF CONTACT — BLOCS FORMULAIRE / COORDONNÉES MÊME HAUTEUR
+   Aligne les deux cartes de la page contact sur la même hauteur,
+   sans toucher aux autres pages.
+========================================================= */
+
+.contact-page .contact-layout {
+  align-items: stretch !important;
+}
+
+.contact-page .contact-card {
+  height: 100% !important;
+}
+
+.contact-page .contact-form,
+.contact-page .contact-info {
+  height: 100% !important;
+}
+
+@media (max-width: 1180px) {
+  .contact-page .contact-card,
+  .contact-page .contact-form,
+  .contact-page .contact-info {
+    height: auto !important;
   }
 }
