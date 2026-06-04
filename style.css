@@ -317,7 +317,7 @@ textarea {
 }
 
 .section {
-  padding: 78px 0;
+  padding: 40px 0;
 }
 
 .section-head,
@@ -380,7 +380,7 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page):not(.legal-page) 
 }
 
 .intro-strip {
-  padding: 18px 0 10px;
+  padding: 18px 0 35px;
 }
 
 .intro-strip__box {
@@ -405,7 +405,7 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page):not(.legal-page) 
 }
 
 .services-section {
-  padding-top: 54px;
+  padding-top: 65px;
 }
 
 .cards-grid {
@@ -479,7 +479,7 @@ body:not(.prest-page):not(.contact-page):not(.actualites-page):not(.legal-page) 
 }
 
 .about-section {
-  padding-top: 68px;
+  padding-top: 18px;
   padding-bottom: 42px;
 }
 
@@ -1668,5 +1668,59 @@ intervention-section {
   .contact-page .contact-form,
   .contact-page .contact-info {
     height: auto !important;
+  }
+}
+
+/* =========================================================
+   CORRECTIF RESPONSIVE FINAL — BANNIÈRE NON COUPÉE + CTA CENTRÉ
+========================================================= */
+
+@media (max-width: 768px) {
+  body.home-page .hero-banner,
+  body.home-clean .hero-banner {
+    background: var(--black);
+  }
+
+  body.home-page .hero-banner img,
+  body.home-clean .hero-banner img {
+    width: 100%;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+
+  .btn-devis {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .cta-band--split {
+    text-align: center !important;
+  }
+
+  .cta-band--split .cta-band__inner {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .cta-band--split .cta-band__text {
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  .cta-band--split .cta-band__text h2,
+  .cta-band--split .cta-band__text p {
+    text-align: center !important;
+  }
+
+  .cta-band--split .btn-row {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .cta-band--split .btn-cta {
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
