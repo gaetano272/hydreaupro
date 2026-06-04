@@ -3,13 +3,179 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mentions légales — HYDREAUPRO</title>
-  <meta name="description" content="Mentions légales du site HYDREAUPRO.">
+  <title>Mentions légales, confidentialité et cookies — HYDREAUPRO</title>
+  <meta name="description" content="Mentions légales, politique de confidentialité et politique de cookies du site HYDREAUPRO.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
   <script defer src="main.js"></script>
+
+  <style>
+    .legal-page .page-header { padding-bottom: 28px; }
+    .legal-page .page-title { max-width: 980px; margin: 0 auto; text-align: center; }
+    .legal-page .page-title h1 { margin-bottom: 18px; }
+    .legal-page .page-intro { max-width: 880px; margin: 0 auto; }
+
+    .legal-wrapper { padding-top: 26px; }
+
+    .legal-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .legal-summary {
+      position: sticky;
+      top: 110px;
+      padding: 22px;
+      border-radius: 24px;
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(18, 18, 18, 0.06);
+    }
+
+    .legal-summary h2 {
+      margin: 0 0 14px;
+      font-size: 1.25rem;
+      color: var(--black-soft);
+      font-family: var(--font-title);
+    }
+
+    .legal-summary nav { display: grid; gap: 8px; }
+
+    .legal-summary a {
+      display: block;
+      padding: 9px 12px;
+      border-radius: 999px;
+      color: var(--text);
+      background: rgba(255, 106, 0, 0.06);
+      font-weight: 700;
+      font-size: 0.93rem;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .legal-summary a:hover { color: #fff; background: var(--orange); }
+
+    .legal-card {
+      padding: 34px;
+      border-radius: 28px;
+      background: #fff;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(18, 18, 18, 0.06);
+    }
+
+    .legal-card + .legal-card { margin-top: 24px; }
+
+    .legal-card h2 {
+      margin: 0 0 18px;
+      color: var(--orange);
+      font-family: var(--font-title);
+      font-size: clamp(1.7rem, 3vw, 2.35rem);
+      line-height: 1.08;
+    }
+
+    .legal-card h3 {
+      margin: 28px 0 10px;
+      color: var(--black-soft);
+      font-family: var(--font-title);
+      font-size: 1.28rem;
+      line-height: 1.18;
+    }
+
+    .legal-card p {
+      margin: 0 0 14px;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .legal-card ul {
+      margin: 10px 0 20px;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .legal-card li {
+      position: relative;
+      padding-left: 22px;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .legal-card li::before {
+      content: "›";
+      position: absolute;
+      left: 0;
+      top: -1px;
+      color: var(--orange);
+      font-size: 1.45rem;
+      font-weight: 900;
+    }
+
+    .legal-info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 18px 0 8px;
+    }
+
+    .legal-info {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: var(--bg);
+      border: 1px solid rgba(18, 18, 18, 0.06);
+    }
+
+    .legal-info strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--black-soft);
+      font-weight: 900;
+    }
+
+    .legal-info span,
+    .legal-info a {
+      color: var(--text);
+      word-break: break-word;
+    }
+
+    .legal-note {
+      padding: 18px 20px;
+      margin: 22px 0 0;
+      border-radius: 20px;
+      background: rgba(255, 106, 0, 0.10);
+      border: 1px solid rgba(255, 106, 0, 0.20);
+      color: var(--black-soft);
+      font-weight: 700;
+    }
+
+    .legal-update {
+      display: inline-flex;
+      margin-top: 14px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--black-soft);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    @media (max-width: 980px) {
+      .legal-layout { grid-template-columns: 1fr; }
+      .legal-summary { position: static; }
+      .legal-summary nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 640px) {
+      .legal-card { padding: 24px 18px; }
+      .legal-info-grid,
+      .legal-summary nav { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
+
 <body class="prest-page legal-page">
 
   <nav class="site-header" aria-label="Navigation principale">
@@ -42,37 +208,317 @@
         <div class="page-title">
           <h1>Mentions légales</h1>
           <div class="page-intro">
-           <p>Cette page regroupe les informations légales du site. Les informations administratives définitives peuvent être complétées avant la mise en ligne officielle.</p>
+            <p>
+              Cette page regroupe les informations légales du site HYDREAUPRO, ainsi que les
+              informations relatives aux données personnelles, à la confidentialité et aux cookies.
+            </p>
+            <span class="legal-update">Dernière mise à jour : juin 2026</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="contact-card contact-form">
-          <h2 class="section-title">Éditeur du site</h2>
-          <p><strong>Nom commercial :</strong> HYDREAUPRO</p>
-          <p><strong>Adresse :</strong> Villa 376 Médine, M’Bour — Sénégal</p>
-          <p><strong>Email :</strong> <a href="mailto:contact@hydreaupro.sn">contact@hydreaupro.sn</a></p>
-          <p><strong>Téléphone :</strong> <a href="tel:+2210789589586">+221 07 89 58 95 86</a></p>
+    <section class="section legal-wrapper">
+      <div class="container legal-layout">
 
-          <h2 class="section-title">Hébergement</h2>
-          <p>Les informations relatives à l’hébergeur sont à compléter selon l’hébergement retenu pour la mise en ligne définitive.</p>
+        <aside class="legal-summary" aria-label="Sommaire de la page">
+          <h2>Sommaire</h2>
+          <nav>
+            <a href="#editeur">Éditeur du site</a>
+            <a href="#hebergement">Hébergement</a>
+            <a href="#activite">Activité</a>
+            <a href="#propriete">Propriété intellectuelle</a>
+            <a href="#responsabilite">Responsabilité</a>
+            <a href="#confidentialite">Confidentialité</a>
+            <a href="#cookies">Cookies</a>
+            <a href="#prospection">Prospection</a>
+            <a href="#droit">Droit applicable</a>
+            <a href="#contact-legal">Contact</a>
+          </nav>
+        </aside>
 
-          <h2 class="section-title">Propriété intellectuelle</h2>
-          <p>L’ensemble des contenus présents sur le site, notamment les textes, visuels, éléments graphiques et structure des pages, est destiné à la présentation des services HYDREAUPRO.</p>
+        <div class="legal-content">
 
-          <h2 class="section-title">Données personnelles</h2>
-          <p>Les informations transmises via le formulaire de contact sont utilisées uniquement pour répondre aux demandes reçues. Elles ne sont pas destinées à être revendues ou transmises à des tiers.</p>
+          <section class="legal-card" id="editeur">
+            <h2>Éditeur du site</h2>
+            <p>
+              Le présent site internet est édité par HYDREAUPRO, entreprise spécialisée dans les
+              solutions d’assainissement autonome, de surpression d’eau potable et d’irrigation au Sénégal.
+            </p>
+
+            <div class="legal-info-grid">
+              <div class="legal-info">
+                <strong>Nom commercial</strong>
+                <span>HYDREAUPRO</span>
+              </div>
+              <div class="legal-info">
+                <strong>Adresse</strong>
+                <span>C2PM+7HV M’Bour, Sénégal</span>
+              </div>
+              <div class="legal-info">
+                <strong>Téléphone</strong>
+                <a href="tel:+2210789589586">+221 07 89 58 95 86</a>
+              </div>
+              <div class="legal-info">
+                <strong>Email</strong>
+                <a href="mailto:contact@hydreaupro.sn">contact@hydreaupro.sn</a>
+              </div>
+              <div class="legal-info">
+                <strong>NINEA / RCCM</strong>
+                <span>À compléter après validation des informations administratives.</span>
+              </div>
+              <div class="legal-info">
+                <strong>Responsable de publication</strong>
+                <span>À compléter.</span>
+              </div>
+            </div>
+
+            <p class="legal-note">
+              Les informations administratives définitives devront être validées par HYDREAUPRO
+              avant la mise en ligne officielle du site.
+            </p>
+          </section>
+
+          <section class="legal-card" id="hebergement">
+            <h2>Hébergement</h2>
+            <p>
+              Le site est destiné à être hébergé auprès d’un prestataire technique spécialisé.
+              Pour la mise en ligne définitive, l’hébergement prévu est OVHcloud, sous réserve de
+              confirmation de l’offre retenue.
+            </p>
+
+            <div class="legal-info-grid">
+              <div class="legal-info">
+                <strong>Hébergeur prévu</strong>
+                <span>OVH SAS / OVHcloud</span>
+              </div>
+              <div class="legal-info">
+                <strong>Adresse</strong>
+                <span>2 rue Kellermann, 59100 Roubaix, France</span>
+              </div>
+              <div class="legal-info">
+                <strong>Pays d’hébergement</strong>
+                <span>À confirmer selon l’offre d’hébergement choisie.</span>
+              </div>
+              <div class="legal-info">
+                <strong>Site de l’hébergeur</strong>
+                <span>ovhcloud.com</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="legal-card" id="activite">
+            <h2>Activité de HYDREAUPRO</h2>
+            <p>
+              HYDREAUPRO accompagne les particuliers, professionnels, exploitants et porteurs de projets
+              dans la mise en place de solutions techniques adaptées aux réalités du terrain.
+            </p>
+            <ul>
+              <li>Études, conseils et travaux liés à l’assainissement autonome.</li>
+              <li>Solutions de surpression, stockage et distribution d’eau potable.</li>
+              <li>Solutions d’irrigation, de gestion de l’eau agricole et de pompage.</li>
+              <li>Accompagnement technique, suivi de projet et maintenance selon les besoins.</li>
+            </ul>
+            <p>
+              Les informations présentées sur le site sont fournies à titre informatif et ne remplacent
+              pas une étude technique personnalisée réalisée sur site.
+            </p>
+          </section>
+
+          <section class="legal-card" id="propriete">
+            <h2>Propriété intellectuelle</h2>
+            <p>
+              L’ensemble des contenus présents sur ce site, notamment les textes, images, logos,
+              éléments graphiques, mises en page, icônes et structure des pages, est protégé par le
+              droit d’auteur et par les droits de propriété intellectuelle applicables.
+            </p>
+            <p>
+              Toute reproduction, représentation, modification, publication, adaptation ou exploitation
+              de tout ou partie du site, sur quelque support que ce soit, est interdite sans autorisation
+              écrite préalable de HYDREAUPRO.
+            </p>
+            <p>
+              Les marques, logos ou contenus appartenant à des tiers restent la propriété de leurs
+              titulaires respectifs.
+            </p>
+          </section>
+
+          <section class="legal-card" id="responsabilite">
+            <h2>Responsabilité</h2>
+            <p>
+              HYDREAUPRO s’efforce de fournir sur ce site des informations exactes, claires et mises à jour.
+              Toutefois, des erreurs, omissions ou indisponibilités temporaires peuvent survenir.
+            </p>
+            <p>
+              Les performances, économies, rendements ou résultats opérationnels évoqués dépendent des
+              caractéristiques propres à chaque projet : configuration du site, besoins techniques,
+              qualité des équipements, conditions d’installation, entretien et usage.
+            </p>
+            <p>
+              Les liens externes éventuellement présents sur le site sont fournis à titre informatif.
+              HYDREAUPRO ne peut être tenue responsable du contenu ou des pratiques de sites tiers.
+            </p>
+          </section>
+
+          <section class="legal-card" id="confidentialite">
+            <h2>Politique de confidentialité</h2>
+            <p>
+              HYDREAUPRO accorde une attention particulière à la protection des données personnelles
+              transmises via son site internet. Les données collectées sont limitées à ce qui est nécessaire
+              pour comprendre les demandes reçues et y répondre de manière sérieuse et adaptée.
+            </p>
+
+            <h3>Données susceptibles d’être collectées</h3>
+            <ul>
+              <li>Identité : prénom, nom, organisation ou fonction lorsque ces informations sont fournies.</li>
+              <li>Coordonnées : adresse email, numéro de téléphone, ville ou zone du projet.</li>
+              <li>Données liées au projet : service concerné, sujet, message, contraintes du site, besoins techniques.</li>
+              <li>Données techniques de navigation : adresse IP, informations de navigateur, pages consultées, uniquement si des outils techniques ou statistiques sont activés.</li>
+            </ul>
+
+            <h3>Finalités du traitement</h3>
+            <ul>
+              <li>Répondre aux demandes envoyées via le formulaire de contact.</li>
+              <li>Échanger sur un projet, une étude, un devis ou une intervention.</li>
+              <li>Assurer le suivi administratif, technique ou commercial des demandes.</li>
+              <li>Garantir la sécurité, la maintenance et le bon fonctionnement du site.</li>
+              <li>Réaliser des statistiques de fréquentation uniquement si un outil de mesure est activé.</li>
+            </ul>
+
+            <h3>Destinataires des données</h3>
+            <p>
+              Les données transmises sont destinées à HYDREAUPRO et, lorsque cela est nécessaire,
+              à ses prestataires techniques ou partenaires intervenant dans le cadre du projet.
+              Elles ne sont pas revendues à des tiers.
+            </p>
+
+            <h3>Durées de conservation</h3>
+            <p>
+              Les demandes de contact peuvent être conservées pendant la durée nécessaire au traitement
+              de la demande, puis archivées pendant une durée raisonnable pour le suivi commercial,
+              administratif ou contractuel. Les données techniques et cookies sont conservés selon leur
+              nature et les règles applicables.
+            </p>
+
+            <h3>Droits des utilisateurs</h3>
+            <p>
+              Conformément aux règles applicables en matière de protection des données personnelles,
+              vous pouvez demander l’accès, la rectification, la mise à jour, l’opposition ou la suppression
+              de vos données lorsque ces droits sont applicables.
+            </p>
+            <p>
+              Pour exercer vos droits, vous pouvez contacter HYDREAUPRO à l’adresse :
+              <a href="mailto:contact@hydreaupro.sn">contact@hydreaupro.sn</a>.
+            </p>
+
+            <p class="legal-note">
+              Le site est établi pour une entreprise située au Sénégal. Lorsque des utilisateurs situés
+              dans l’Union européenne contactent HYDREAUPRO, une attention particulière est portée aux
+              bonnes pratiques issues du RGPD, notamment pour le formulaire, les cookies et la prospection.
+            </p>
+          </section>
+
+          <section class="legal-card" id="cookies">
+            <h2>Politique de cookies</h2>
+            <p>
+              Le site HYDREAUPRO peut utiliser des cookies ou technologies similaires pour assurer son
+              fonctionnement, sécuriser la navigation et, le cas échéant, mesurer la fréquentation du site.
+            </p>
+
+            <h3>Cookies strictement nécessaires</h3>
+            <p>
+              Ces cookies sont indispensables au bon fonctionnement du site et ne nécessitent pas de
+              consentement préalable lorsqu’ils sont strictement limités à cette finalité.
+            </p>
+
+            <h3>Cookies de mesure d’audience</h3>
+            <p>
+              Si un outil de mesure d’audience est ajouté ultérieurement, HYDREAUPRO précisera l’outil
+              utilisé, sa finalité, sa durée de conservation et les modalités de consentement lorsque celui-ci
+              est requis.
+            </p>
+
+            <h3>Services tiers</h3>
+            <p>
+              Certaines fonctionnalités, comme l’intégration d’une carte Google Maps, peuvent impliquer
+              le chargement de services tiers. Ces services peuvent déposer leurs propres cookies ou traceurs
+              selon leurs conditions d’utilisation.
+            </p>
+
+            <p class="legal-note">
+              À ce stade, si le site ne contient pas d’outil publicitaire, de pixel marketing ou de mesure
+              d’audience avancée, une politique cookies courte peut suffire. En cas d’ajout de Google Analytics,
+              Meta Pixel, YouTube intégré ou autre traceur marketing, un bandeau de consentement devra être prévu.
+            </p>
+          </section>
+
+          <section class="legal-card" id="prospection">
+            <h2>Prospection et communications</h2>
+            <p>
+              HYDREAUPRO peut recontacter les personnes ayant transmis une demande afin d’apporter une
+              réponse, proposer une étude, établir un devis ou assurer le suivi d’un projet.
+            </p>
+            <p>
+              Toute communication commerciale non directement liée à une demande initiale devra respecter
+              les règles applicables, notamment en matière de consentement, d’information et de possibilité
+              d’opposition.
+            </p>
+          </section>
+
+          <section class="legal-card" id="droit">
+            <h2>Droit applicable</h2>
+            <p>
+              Le présent site est édité dans le cadre de l’activité de HYDREAUPRO au Sénégal. Les présentes
+              mentions sont soumises au droit applicable au Sénégal, sous réserve des règles impératives
+              éventuellement applicables aux utilisateurs situés dans d’autres pays.
+            </p>
+            <p>
+              En cas de litige, les parties chercheront prioritairement une solution amiable. À défaut,
+              le litige relèvera des juridictions compétentes conformément aux règles applicables.
+            </p>
+          </section>
+
+          <section class="legal-card" id="contact-legal">
+            <h2>Contact légal et données personnelles</h2>
+            <p>
+              Pour toute question concernant les présentes mentions légales, la politique de confidentialité,
+              les cookies ou l’exercice de vos droits, vous pouvez contacter HYDREAUPRO :
+            </p>
+
+            <div class="legal-info-grid">
+              <div class="legal-info">
+                <strong>Email</strong>
+                <a href="mailto:contact@hydreaupro.sn">contact@hydreaupro.sn</a>
+              </div>
+              <div class="legal-info">
+                <strong>Téléphone</strong>
+                <a href="tel:+2210789589586">+221 07 89 58 95 86</a>
+              </div>
+              <div class="legal-info">
+                <strong>Adresse</strong>
+                <span>C2PM+7HV M’Bour, Sénégal</span>
+              </div>
+              <div class="legal-info">
+                <strong>Réseaux sociaux</strong>
+                <span>À compléter après validation des comptes officiels.</span>
+              </div>
+            </div>
+          </section>
+
         </div>
       </div>
     </section>
   </main>
 
-<footer class="site-footer">
+  <footer class="site-footer">
     <div class="container site-footer__inner">
       <small>© 2026 HYDREAUPRO — Assainissement autonome, surpression d’eau potable et irrigation au Sénégal.</small>
-      <small><a href="mentions-legales.html">Mentions légales</a> · <a href="mailto:contact@hydreaupro.sn">contact@hydreaupro.sn</a></small>
+      <small>
+        <a href="mentions-legales.html">Mentions légales</a> ·
+        <a href="mentions-legales.html#confidentialite">Confidentialité</a> ·
+        <a href="mentions-legales.html#cookies">Cookies</a> ·
+        <a href="mailto:contact@hydreaupro.sn">contact@hydreaupro.sn</a>
+      </small>
     </div>
   </footer>
 </body>
