@@ -5,10 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact — HYDREAUPRO</title>
   <meta name="description" content="Contactez HYDREAUPRO pour vos besoins en assainissement autonome, surpression d’eau potable et irrigation au Sénégal.">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="images/favicon-hydreaupro.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
   <script defer src="main.js"></script>
+</head>
+  <style>
+    .contact-honeypot {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+  </style>
 </head>
 <body class="prest-page contact-page contact-page--simple">
 
@@ -40,7 +57,7 @@
     <section class="page-header">
       <div class="container">
         <div class="section-heading">
-          <h2>Décrivez vos besoins</h2>
+          <h1 style="color:#ff7a00;">Décrivez vos besoins</h1>
           <p>Nous vous répondrons avec une approche claire, sérieuse et adaptée à vos projets.</p>
         </div>
       </div>
@@ -49,7 +66,13 @@
     <section class="section">
       <div class="container">
         <div class="contact-layout">
-          <form action="#" class="contact-card contact-form" id="contactForm" method="post" novalidate>
+          <form action="envoyer-contact.php" class="contact-card contact-form" id="contactForm" method="post" accept-charset="UTF-8">
+
+            <div class="contact-honeypot" aria-hidden="true">
+              <label for="website">Ne pas remplir ce champ</label>
+              <input id="website" name="website" tabindex="-1" autocomplete="off" type="text">
+            </div>
+
             <div class="form-grid">
               <div class="field">
                 <label for="prenom">Prénom</label>
@@ -101,7 +124,7 @@
 
             <label class="consent">
               <input name="rgpd" required type="checkbox">
-              <span>J’accepte que mes informations soient utilisées pour me recontacter et répondre à ma demande.</span>
+              <span>J’accepte que mes informations soient utilisées pour me recontacter et répondre à ma demande. <a href="mentions-legales.html#confidentialite">Consulter la politique de confidentialité.</a></span>
             </label>
 
             <div class="form-actions">
@@ -119,7 +142,7 @@
             <div class="info-list">
               <div class="info-item">
                 <strong>Téléphone</strong>
-                <a href="tel:+2210789589586">+221 07 89 58 95 86</a>
+                <a href="tel:+221711333608">+221 71 133 36 08</a>
               </div>
               <div class="info-item">
                 <strong>Email</strong>
@@ -128,6 +151,19 @@
               <div class="info-item">
                 <strong>Adresse</strong>
                 <span>Villa 376 Médine, M’Bour — Sénégal</span>
+
+                <div class="map-wrap">
+                  <iframe
+                    allowfullscreen
+                    class="map"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://maps.google.com/maps?q=14.435745,-16.966091&hl=fr&z=18&output=embed"
+                    style="border:0;"
+                    title="Carte HYDREAUPRO — Villa 376 Médine, M’Bour">
+                  </iframe>
+                </div>
+
                 <a href="https://www.google.com/maps?q=14.435745,-16.966091"
                    target="_blank"
                    rel="noopener noreferrer">
@@ -136,17 +172,6 @@
               </div>
             </div>
 
-            <div class="map-wrap">
-              <iframe
-                allowfullscreen
-                class="map"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                src="https://maps.google.com/maps?q=14.435745,-16.966091&hl=fr&z=18&output=embed"
-                style="border:0;"
-                title="Carte HYDREAUPRO — Villa 376 Médine, M’Bour">
-              </iframe>
-            </div>
           </aside>
         </div>
       </div>
